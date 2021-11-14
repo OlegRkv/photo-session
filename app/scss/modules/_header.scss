@@ -1,0 +1,149 @@
+.header {
+  padding-top: 25px;
+  height: 100vh;
+  background: url("../../images/header-bg.jpg") center center/cover no-repeat;
+
+  &__nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+  }
+
+  &__inner {
+    max-width: 720px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    position: relative;
+    width: 42px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 42px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #e7c5a9;
+      left: 0;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    span {
+      display: block;
+      width: 42px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #e7c5a9;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    display: block;
+    padding: 10px 25px 10px 65px;
+    border-radius: 27px;
+    font-size: 25px;
+    color: #959191;
+    background-color: #fdfbf8;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/icons/phone-icon.svg');
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 40px;
+      top: 7px;
+      left: 10px;
+    }
+  }
+
+  &__wrapper {
+    height: calc(100vh - 240px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+    margin-bottom: 65px;
+    max-width: 475px;
+    font-family: "Annabelle";
+    font-weight: 400;
+    font-size: 60px;
+    color: #e1bda3;
+    text-align: center;
+    line-height: 65px;
+  }
+
+  &__title-photosession {
+    display: block;
+    margin-top: 20px;
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 47px;
+    line-height: 65px;
+    text-transform: uppercase;
+    background: linear-gradient(100deg, #ddb99c 0%, #909090 100%);
+    color: rgb(221, 185, 156);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__button {
+    position: relative;
+    display: block;
+    width: 257px;
+    height: 86px;
+    padding: 0;
+    border-radius: 38px;
+    font-family: "Cocogoose", sans-serif;
+    font-size: 700px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 2px;
+    border: none;
+    background-image: url('../images/button-bg.png');
+    background-position: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff5ed;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 54px;
+      height: 49px;
+      background: url('../images/icons/heart.svg');
+      background-repeat: no-repeat;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}
+
+
+
+

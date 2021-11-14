@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  font-family: "MuseoSansCyrl", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.4;
+  background-color: #fff;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
