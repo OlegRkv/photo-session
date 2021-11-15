@@ -91,7 +91,7 @@
     font-family: "Annabelle";
     font-weight: 400;
     font-size: 60px;
-    color: #e1bda3;
+    color: $default;
     text-align: center;
     line-height: 65px;
   }
@@ -104,10 +104,6 @@
     font-size: 47px;
     line-height: 65px;
     text-transform: uppercase;
-    background: linear-gradient(100deg, #ddb99c 0%, #909090 100%);
-    color: rgb(221, 185, 156);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 
   &__button {
@@ -118,13 +114,13 @@
     padding: 0;
     border-radius: 38px;
     font-family: "Cocogoose", sans-serif;
-    font-size: 700px;
+    font-weight: 700;
     text-transform: uppercase;
     font-size: 15px;
     letter-spacing: 2px;
     border: none;
     background-image: url('../images/button-bg.png');
-    background-position: 100% 100%;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff5ed;

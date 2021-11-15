@@ -19,3 +19,9 @@ main {
   padding: 0 15px;
 }
 
+.title-gradient {
+  background: linear-gradient(100deg, #ddb99c 0%, #909090 100%);
+  color: rgb(221, 185, 156);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,124 @@
+.convenience {
+  margin-bottom: 150px;
+  padding-top: 50px;
+  &__subtitle {
+    font-family: "Annabelle";
+    font-weight: 400;
+    font-size: 60px;
+    color: $default;
+    text-align: center;
+  }
+  
+  &__title {
+    max-width: 760px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    max-height: 825px;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "convenience__item--1 convenience__item--2 convenience__item--4"
+                          "convenience__item--1 convenience__item--3 convenience__item--4";
+    grid-gap: 15px;
+    grid-template-columns: 35% 1fr 25%;
+    grid-template-rows: minmax(405px, 825px) 50% 50% 1fr;
+  }
+
+  &__item-text {
+    max-width: 230px;
+    text-align: center;
+  }
+
+   &__item-text--bg {
+     width: 440px;
+     max-width: 100%;
+     height: 335px;
+     padding-right: 135px;
+     padding-top: 120px;
+     background-image: url("../images/convenience/item-2bg.png");
+     background-position: -115px 0;
+     background-size: cover;
+     background-repeat: no-repeat;
+   }
+
+  &__item--1 {
+    grid-area: convenience__item--1;
+    padding-top: 170px;
+    padding-left: 140px;
+    background-image: url("../images/convenience/photograph.jpg");
+    background-position: -80px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  &__item--2 {
+    grid-area: convenience__item--2;
+    background-image: url("../images/convenience/item-2.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__item--3 {
+    grid-area: convenience__item--3;
+    background-image: url("../images/convenience/item-3.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .convenience__item-text {
+      margin-right: 75px;
+      margin-left: auto;
+      padding-top: 130px;
+    }
+  }
+
+  &__item--4 {
+    grid-area: convenience__item--4;
+    position: relative;
+    padding-top: 70px;
+    background-image: url("../images/convenience/item-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 539px;
+      height: 583px;
+      bottom: 0;
+      right: 0;
+      background-image: url("../images/convenience/item-bg2.png");
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
+
+    .convenience__item-text {
+      margin: 0 auto;
+    }
+  }
+
+  &__item-title {
+    font-family: "Annabelle";
+    font-weight: 400;
+    font-size: 52px;
+    color: $default;
+  }
+
+  &__item-subtitle {
+    font-family: "MuseoSansCyrl";
+    font-weight: 300;
+    font-size: 18px;
+    color: #888888;
+  }
+
+}
