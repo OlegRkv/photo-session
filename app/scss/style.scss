@@ -1,9 +1,11 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 
 @import "modules/header";
 @import "modules/convenience";
 @import "modules/price";
+@import "modules/reviews";
