@@ -56,27 +56,6 @@
     }
   }
 
-  &__phone {
-    position: relative;
-    display: block;
-    padding: 10px 25px 10px 65px;
-    border-radius: 27px;
-    font-size: 25px;
-    color: #959191;
-    background-color: #fdfbf8;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      background-image: url('../images/icons/phone-icon.svg');
-      background-repeat: no-repeat;
-      width: 40px;
-      height: 40px;
-      top: 7px;
-      left: 10px;
-    }
-  }
-
   &__wrapper {
     height: calc(100vh - 240px);
     display: flex;

@@ -1,0 +1,19 @@
+.map {
+  padding-top: 95px;
+  padding-bottom: 60px;
+  text-align: center;
+
+  &__subtitle {
+    margin-bottom: 20px;
+    font-family: "Annabelle", sans-serif;
+    font-size: 60px;
+    color: $default;
+  }
+
+  &__title {
+    margin-bottom: 75px;
+    font-weight: 300;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+}

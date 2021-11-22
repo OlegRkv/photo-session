@@ -1,0 +1,35 @@
+.atmosphere {
+  padding-top: 260px;
+  padding-bottom: 230px;
+  text-align: center;
+  background-image: url("../images/atmosphere-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__subtitle {
+    margin-bottom: 35px;
+    font-family: "Annabelle", sans-serif;
+    font-size: 50px;
+    color: $default;
+  }
+
+  &__title {
+    max-width: 745px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 40px;
+  }
+
+  &__text {
+    margin-bottom: 90px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #969696;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

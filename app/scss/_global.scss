@@ -10,7 +10,7 @@ body {
   align-items: space-between;
   font-family: "MuseoSansCyrl", sans-serif;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 14px;
   line-height: 1.4;
   background-color: #fff;
 }
@@ -62,5 +62,26 @@ main {
     top: -25px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+.phone {
+  position: relative;
+  display: block;
+  padding: 10px 25px 10px 65px;
+  border-radius: 27px;
+  font-size: 25px;
+  color: #959191;
+  background-color: #fdfbf8;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/phone-icon.svg');
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    top: 7px;
+    left: 10px;
   }
 }
