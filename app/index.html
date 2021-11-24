@@ -16,12 +16,32 @@
       <nav class="header__nav">
         <div class="header__inner">
           <a class="logo" href="#">
-            <img src="../images/logo.png" alt="Логотип фото лавка" class="header__img">
+            <img src="images/logo.png" alt="Логотип фото лавка" class="header__img">
           </a>
           <a class="phone" href="tel:+74957787777">+7 (495) 778-77-77</a>
-          <button class="header__menu" type="button">
-            <span></span>
-          </button>
+
+          <div class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#price">Рассчитать стоимость</a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link" href="#reviews">Отзывы</a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link" href="#taxi">Промокод на такси</a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link" href="#map">Контакты</a>
+              </li>
+            </ul>
+            <button class="menu__button" type="button">
+              <span></span>
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -34,7 +54,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <!-- <main class="main">
     <section class="convenience">
       <div class="container">
         <p class="convenience__subtitle">Для вашего удобства</p>
@@ -79,7 +99,7 @@
       </ul>
     </section>
 
-    <section class="price">
+    <section class="price" id="price">
       <div class="container">
         <h2 class="price__title">
           Рассчитайте стоимость вашей фотосессии и получите подарок
@@ -100,7 +120,7 @@
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="reviews__photo-container">
         <div class="reviews__photo-inner">
           <p class="reviews__subtitle">Посмотрите</p>
@@ -127,15 +147,7 @@
           </div>
           <a class="reviews__video-link button" href="https://youtu.be/KwRSQZ7pn6g" data-fancybox>
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="27" viewBox="0 0 15 27">
-              <defs>
-                <style>
-                  .cls-1 {
-                    fill: #f7ebe1;
-                    fill-rule: evenodd;
-                  }
-                </style>
-              </defs>
-              <path id="Forma_1" data-name="Forma 1" class="cls-1"
+              <path fill="#f7ebe1"
                 d="M1379.54,4691.19a0.848,0.848,0,0,1,.54-0.19,0.889,0.889,0,0,1,.54.19l12.84,12.1a1.626,1.626,0,0,1,0,2.42l-12.84,12.1a0.871,0.871,0,0,1-1.08,0,1.493,1.493,0,0,1-.54-1.21v-24.2A1.493,1.493,0,0,1,1379.54,4691.19Z"
                 transform="translate(-1379 -4691)" />
             </svg>
@@ -144,7 +156,7 @@
       </div>
     </section>
 
-    <section class="taxi">
+    <section class="taxi" id="taxi">
       <div class="container">
         <div class="taxi__wrapper">
           <div class="taxi__descr">
@@ -260,7 +272,7 @@
       </div>
     </section>
 
-    <section class="map">
+    <section class="map" id="map">
       <div class="container">
         <p class="map__subtitle">
           Ждём вас в гости
@@ -276,12 +288,12 @@
     </section>
   </main>
 
-  <footer class="footer">
+ <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
         <div class="footer__logo-box">
           <a class="logo footer__logo" href="#">
-            <img src="../images/logo.png" alt="Логотип фото лавка" class="header__img">
+            <img src="images/logo.png" alt="Логотип фото лавка" class="header__img">
           </a>
           <span class="footer__logo-descr">ООО «ФотоЛавка»</span>
         </div>
@@ -392,7 +404,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="js/main.min.js"></script>
 </body>

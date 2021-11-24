@@ -1,12 +1,47 @@
 .header {
   padding-top: 25px;
   height: 100vh;
-  background: url("../images/header-bg.jpg") center center/cover no-repeat;
+  background-image: url("../images/header-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &__nav {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 100px;
+
+    @media (max-width: 1310px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 475px) {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__nav--fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: rgba(117, 82, 82, 0.8);
+    z-index: 3;
+
+    .header__inner {
+      padding-right: 35px;
+      justify-content: flex-end;
+
+      .phone {
+        margin-right: 40px;
+      }
+    }
+
+    .logo {
+      display: none;
+    }
   }
 
   &__inner {
@@ -15,44 +50,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  &__menu {
-    position: relative;
-    width: 42px;
-    height: 32px;
-    padding: 0;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      width: 42px;
-      height: 6px;
-      border-radius: 3px;
-      background-color: #e7c5a9;
-      left: 0;
-    }
-
-    &::before {
-      top: 0;
-    }
-
-    &::after {
-      bottom: 0;
-    }
-
-    span {
-      display: block;
-      width: 42px;
-      height: 6px;
-      border-radius: 3px;
-      background-color: #e7c5a9;
+    @media (max-width: 600px) {
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
   }
 
@@ -73,6 +74,10 @@
     color: $default;
     text-align: center;
     line-height: 65px;
+
+    @media (max-width: 475px) {
+      font-size: 54px;
+    }
   }
 
   &__title-photosession {
@@ -83,8 +88,127 @@
     font-size: 47px;
     line-height: 65px;
     text-transform: uppercase;
+
+    @media (max-width: 475px) {
+      font-size: 31px;
+      line-height: 40px;
+      -webkit-text-fill-color: #909090;
+      background-image: none;
+    }
   }
 }
+
+.menu {
+  &__list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #755252;
+    background: radial-gradient(circle, rgba(117, 82, 82, 1) 0%, rgba(225, 189, 163, 1) 100%);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    z-index: 3;
+    overflow: auto;
+  }
+
+  &__list--active {
+    transform: translateX(0);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 30px;
+    padding-bottom: 10px;
+    font-family: "Annabelle", sans-serif;
+    font-size: 32px;
+    color: $default;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.5s;
+
+    &:hover {
+      border-bottom-color: $default;
+    }
+
+    @media (max-width: 475px) {
+      padding: 15px;
+      font-size: 28px;
+    }
+  }
+
+  &__button {
+    width: 42px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    z-index: 3;
+
+    span {
+      position: relative;
+      display: block;
+      width: 42px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #e7c5a9;
+      transition: width 0.5s;
+      z-index: 3;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 42px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: #e7c5a9;
+        top: 0;
+        left: 0;
+        transition: transform 0.5s;
+      }
+
+      &::before {
+        transform: translateY(13px);
+      }
+
+      &::after {
+        transform: translateY(-13px);
+      }
+    }
+  }
+
+  &__button--active {
+
+    span {
+      width: 0;
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+
 
 
 

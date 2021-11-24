@@ -15,6 +15,10 @@ body {
   background-color: #fff;
 }
 
+.lock-scroll {
+  overflow: hidden;
+}
+
 main {
   flex: 1 1 auto;
 }
@@ -83,5 +87,9 @@ main {
     height: 40px;
     top: 7px;
     left: 10px;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 }

@@ -22,5 +22,8 @@
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.6.0",
     "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "glob": "^7.2.0"
   }
 }
