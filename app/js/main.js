@@ -6,7 +6,7 @@ $(function () {
   });
 
   /* Fixed menu */
-  var element = $(".header__nav");
+  /* var element = $(".header__nav");
 		var height_el = element.offset().top;
 		$(window).scroll(function() {
 			if($(window).scrollTop() > height_el) {
@@ -14,7 +14,7 @@ $(function () {
 			} else {
 				element.removeClass("header__nav--fixed");
 			}
-		});
+		}); */
 
   /* Smooth scroll */
    $(".menu").on("click","a", function (event) {

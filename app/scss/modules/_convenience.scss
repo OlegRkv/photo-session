@@ -1,11 +1,25 @@
 .convenience {
-  padding-top: 50px;
+  padding-top: 40px;
+
   &__subtitle {
     font-family: "Annabelle";
     font-weight: 400;
     font-size: 60px;
     color: $default;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 55px;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 10px;
+      font-size: 47px;
+    }
+
+    @media (max-width: 475px) {
+      font-size: 30px;
+    }
   }
   
   &__title {
@@ -16,17 +30,64 @@
     font-weight: 300;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 35px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 475px) {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
   }
 
   &__list {
-    max-height: 825px;
-    height: 100%;
+    height: 825px;
     display: grid;
-    grid-template-areas: "convenience__item--1 convenience__item--2 convenience__item--4"
-                          "convenience__item--1 convenience__item--3 convenience__item--4";
+    grid-template-areas: 
+      "convenience__item--1 convenience__item--2 convenience__item--4"
+      "convenience__item--1 convenience__item--3 convenience__item--4";
     grid-gap: 15px;
-    grid-template-columns: 35% 1fr 25%;
-    grid-template-rows: minmax(405px, 825px) 50% 50% 1fr;
+    grid-template-columns: 34% 1fr 25%;
+    grid-template-rows: minmax(300px, 405px) minmax(300px, 405px);
+
+    @media (max-width: 1800px) {
+      grid-template-areas: 
+        "convenience__item--1 convenience__item--4"
+        "convenience__item--2 convenience__item--4"
+        "convenience__item--3 convenience__item--4";
+      grid-template-columns: 60% 40%;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    @media (max-width: 992px) {
+      grid-template-areas: 
+      "convenience__item--1 convenience__item--4"
+      "convenience__item--1 convenience__item--4"
+      "convenience__item--2 convenience__item--2"
+      "convenience__item--3 convenience__item--3";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 412px 412px 30% 30%;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-areas:
+        "convenience__item--1"
+        "convenience__item--2"
+        "convenience__item--4"
+        "convenience__item--3";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 250px);
+    }
+
+    @media (max-width: 475px) {
+      grid-gap: 10px;
+      grid-template-rows: repeat(4, 200px);
+    }
   }
 
   &__item-text {
@@ -44,6 +105,20 @@
      background-position: -115px 0;
      background-size: cover;
      background-repeat: no-repeat;
+
+     @media (max-width: 1800px) {
+       height: auto;
+       padding-top: 6%;
+       background-position: -140px 45px;
+     }
+
+     @media (max-width: 992px) {
+       background-position: -140px 0;
+     }
+
+     @media (max-width: 475px) {
+       width: 100%;
+     }
    }
 
   &__item--1 {
@@ -51,9 +126,19 @@
     padding-top: 170px;
     padding-left: 140px;
     background-image: url("../images/convenience/photograph.jpg");
-    background-position: -80px 0;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 1800px) {
+      padding-top: 4%;
+      padding-left: 25%;
+    }
+
+    @media (max-width: 475px) {
+      padding-top: 1%;
+      padding-left: 0;
+    }
   }
   
   &__item--2 {
@@ -75,6 +160,20 @@
       margin-right: 75px;
       margin-left: auto;
       padding-top: 130px;
+
+      @media (max-width: 1800px) {
+        padding-top: 2%;
+      }
+
+      @media (max-width: 768px) {
+        margin-right: 10px;
+      }
+
+      @media (max-width: 475px) {
+        padding: 0;
+        margin-right: 0;
+        max-width: 180px;
+      }
     }
   }
 
@@ -99,10 +198,43 @@
       background-size: cover;
       background-repeat: no-repeat;
       z-index: 1;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        width: 37%;
+        height: 126%;
+      }
     }
 
     .convenience__item-text {
       margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      padding-top: 45px;
+      padding-left: 30px;
+      background: url("../images/convenience/item-bg2.png") bottom right/contain no-repeat,
+      url("../images/convenience/item-bg.jpg") center center/cover no-repeat;
+
+      &::before {
+        display: none;
+      }
+
+      .convenience__item-text {
+        margin: 0;
+
+        @media (max-width: 475px) {
+          max-width: 160px;
+          padding-top: 25px;
+        }
+      }
+    }
+
+    @media (max-width: 475px) {
+      padding: 0;
     }
   }
 
@@ -111,6 +243,10 @@
     font-weight: 400;
     font-size: 52px;
     color: $default;
+
+    @media (max-width: 475px) {
+      font-size: 40px;
+    }
   }
 
   &__item-subtitle {
@@ -118,6 +254,9 @@
     font-weight: 300;
     font-size: 18px;
     color: #888888;
-  }
 
+    @media (max-width: 475px) {
+      font-size: 15px;
+    }
+  }
 }
