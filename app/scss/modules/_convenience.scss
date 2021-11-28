@@ -65,13 +65,14 @@
     }
 
     @media (max-width: 992px) {
+      height: auto;
       grid-template-areas: 
       "convenience__item--1 convenience__item--4"
       "convenience__item--1 convenience__item--4"
       "convenience__item--2 convenience__item--2"
       "convenience__item--3 convenience__item--3";
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 412px 412px 30% 30%;
+      grid-template-rows: 412px 412px 300px 300px;
     }
 
     @media (max-width: 768px) {
