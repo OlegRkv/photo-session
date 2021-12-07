@@ -2,21 +2,60 @@
   position: relative;
   padding-bottom: 125px;
 
+  @media (max-width: 475px) {
+    padding-bottom: 60px;
+  }
+
   &::before {
     content: url("../images/taxi-bg.png");
     position: absolute;
     bottom: 0;
     left: 11%;
     z-index: 1;
+
+    @media (max-width: 1800px) {
+      left: 0;
+    }
+
+    @media (max-width: 1440px) {
+      left: -45px;
+    }
+
+    @media (max-width: 1310px) {
+      content: '';
+      width: 60%;
+      height: 50%;
+      left: 0;
+      background-image: url("../images/taxi-bg.png");
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   &__wrapper {
     display: flex;
+
+    @media (max-width: 1310px) {
+      flex-direction: column;
+    }
   }
 
   &__descr {
     padding-top: 115px;
     padding-left: 60px;
+
+    @media (max-width: 1310px) {
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: 60px;
+      padding-left: 0;
+      text-align: center;
+    }
   }
 
   &__subtitle {
@@ -24,6 +63,10 @@
     font-family: "Annabelle", sans-serif;
     font-size: 60px;
     color: $default;
+
+    @media (max-width: 600px) {
+      font-size: 50px;
+    }
   }
 
   &__title {
@@ -31,18 +74,31 @@
     font-size: 40px;
     font-weight: 300;
     text-transform: uppercase;
+
+    @media (max-width: 600px) {
+      font-size: 28px;
+    }
   }
 
   &__promo {
     max-width: 410px;
     font-size: 18px;
     color: #969696;
+
+    @media (max-width: 1310px) {
+      margin: 0 auto;
+    }
   }
 
   &__form-container {
     max-width: 570px;
     width: 100%;
     padding-top: 150px;
+
+    @media (max-width: 1310px) {
+      max-width: 100%;
+      padding-top: 60px;
+    }
   }
 
   &__form-box {
@@ -52,6 +108,26 @@
     padding: 10px;
     border-radius: 4px;
     background-color: #f8f8f8;
+
+    @media (max-width: 1310px) {
+      max-width: 100%;
+      padding-right: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    @media (max-width: 992px) {
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      padding-right: 0;
+    }
+
+    @media (max-width: 475px) {
+      padding: 0;
+    }
   }
 
   &__form-inner {
@@ -60,6 +136,16 @@
     text-align: center;
     border: 1px solid #eee9e6;
     border-radius: 4px;
+
+    @media (max-width: 1310px) {
+      display: flex;
+      flex-direction: column;
+      padding: 60px;
+    }
+
+    @media (max-width: 475px) {
+      padding: 20px 0;
+    }
   }
 
   &__form-discount {
@@ -77,16 +163,44 @@
     background-size: contain;
     background-repeat: no-repeat;
     color: #fff;
+
+    @media (max-width: 1800px) {
+      right: -30px;
+    }
+
+    @media (max-width: 1310px) {
+      width: 100px;
+      height: 100px;
+      right: 0;
+    }
+
+    @media (max-width: 475px) {
+      width: 70px;
+      height: 70px;
+      right: 0;
+    }
   }
 
   &__discount-num {
     font-family: "Annabelle", sans-serif;
     font-size: 30px;
+
+    @media (max-width: 1310px) {
+      font-size: 25px;
+    }
+
+    @media (max-width: 475px) {
+      font-size: 17px;
+    }
   }
 
   &__discount-text {
     font-size: 14px;
     text-transform: uppercase;
+
+    @media (max-width: 475px) {
+      font-size: 12px;
+    }
   }
 
   &__form-promocode {
@@ -96,6 +210,13 @@
     font-size: 26px;
     text-transform: uppercase;
     color: #726b6b;
+
+    @media (max-width: 1310px) {
+      margin: 0;
+    }
+    @media (max-width: 475px) {
+      font-size: 22px;
+    }
   }
 
   &__form-text {
