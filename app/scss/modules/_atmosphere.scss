@@ -7,11 +7,40 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @media (max-width: 1440px) {
+    background-position: 0 center;
+  }
+
+  @media (max-width: 1320px) {
+    background-position: -175px center;
+  }
+  
+  @media (max-width: 1200px) {
+    background-position: -745px center;
+  }
+
+  @media (max-width: 992px) {
+    background-position: -770px center;
+  }
+
+  @media (max-width: 600px) {
+    padding: 220px 0;
+    background-position: -660px center;
+  }
+
+  @media (max-width: 475px) {
+    padding: 70px 0;
+  }
+
   &__subtitle {
     margin-bottom: 35px;
     font-family: "Annabelle", sans-serif;
     font-size: 50px;
     color: $default;
+
+    @media (max-width: 600px) {
+      font-size: 48px;
+    }
   }
 
   &__title {
@@ -20,6 +49,10 @@
     margin-bottom: 30px;
     font-weight: 300;
     font-size: 40px;
+
+    @media (max-width: 600px) {
+      font-size: 30px;
+    }
   }
 
   &__text {
