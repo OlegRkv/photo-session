@@ -3,11 +3,19 @@
   padding-bottom: 60px;
   text-align: center;
 
+  @media (max-width: 600px) {
+    padding-top: 60px;
+  }
+
   &__subtitle {
     margin-bottom: 20px;
     font-family: "Annabelle", sans-serif;
     font-size: 60px;
     color: $default;
+
+    @media (max-width: 600px) {
+      font-size: 52px;
+    }
   }
 
   &__title {
@@ -15,5 +23,19 @@
     font-weight: 300;
     font-size: 40px;
     text-transform: uppercase;
+
+    @media (max-width: 600px) {
+      margin-bottom: 60px;
+      font-size: 30px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 1200px;
+    height: 450px;
+
+    @media (max-width: 600px) {
+      height: 300px;
+    }
   }
 }
