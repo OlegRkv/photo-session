@@ -6,7 +6,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media (orientation: landscape) {
+  @media (max-width: 1200px) {
+    background-position: center center;
+  }
+
+  @media (max-width: 768px) and (orientation: landscape) {
     height: auto;
   }
 
@@ -67,7 +71,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (orientation: landscape) {
+    @media (max-width: 768px) and (orientation: landscape) {
       height: auto;
     }
   }

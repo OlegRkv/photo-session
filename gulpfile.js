@@ -6,8 +6,6 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 const del = require('del');
-const svgSprite = require('gulp-svg-sprite');
-const fileInclude = require('gulp-file-include');
 
 
 function browsersync () {
@@ -19,22 +17,10 @@ function browsersync () {
   })
 }
 
-function sprite() {
-  return src('images/icons/**/*.svg')
-  .pipe(svgSprite({
-    mode: {
-      stack: {
-        sprite: '../sprite.svg'
-      }
-    }
-  }))
-  .pipe(dest('app/images/svg'))
-}
-
 function styles() {
   return src('app/scss/style.scss')
-  .pipe(scss({outputStyle: 'expanded'}))
-  .pipe(concat('style.css'))
+  .pipe(scss({outputStyle: 'compressed'}))
+  .pipe(concat('style.min.css'))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 10 versions'],
     grid: true
@@ -71,16 +57,6 @@ function images() {
   .pipe(dest('dist/images'))
 }
 
-function htmlInclude() {
-  return src(['./app/index.html'])
-  .pipe(fileInclude({
-    prefix: '@',
-    basepath: '@file'
-  }))
-  .pipe(dest('./dist'))
-  .pipe(browserSync.stream())
-}
-
 function cleanDist() {
   return del('dist')
 }
@@ -88,7 +64,8 @@ function cleanDist() {
 function build() {
   return src([
     'app/**/*.html',
-    'app/css/style.css',
+    'app/fonts/**/*',
+    'app/css/style.min.css',
     'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))
@@ -106,8 +83,6 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.cleanDist = cleanDist;
 exports.images = images;
-exports.sprite = sprite;
-exports.htmlInclude = htmlInclude;
 exports.build = series(cleanDist, images, build);
 
 exports.default = parallel(styles, scripts, browsersync, watching);
