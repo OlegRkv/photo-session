@@ -126,6 +126,12 @@
     }
   }
 
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   &__link--privacy {
     color: #bcbcbc;
     border-bottom: 1px solid #bcbcbc;
@@ -155,6 +161,8 @@
   }
 
   &__social-item {
+    @extend %animation;
+
     &:not(:last-child) {
       margin-right: 15px;
     }
@@ -211,6 +219,7 @@
     border-bottom: 1px solid $default;
     text-transform: uppercase;
     letter-spacing: 2px;
+    @extend %animation;
 
     @media (max-width: 600px) {
       margin-left: 0;

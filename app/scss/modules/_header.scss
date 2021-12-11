@@ -6,6 +6,10 @@
   background-size: cover;
   background-repeat: no-repeat;
 
+  @media (orientation: landscape) {
+    height: auto;
+  }
+
   &__nav {
     display: flex;
     justify-content: flex-end;
@@ -62,6 +66,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (orientation: landscape) {
+      height: auto;
+    }
   }
 
   &__title {
@@ -158,6 +166,7 @@
     align-items: center;
     background-color: transparent;
     z-index: 3;
+    @extend %animation;
 
     span {
       position: relative;
@@ -193,7 +202,6 @@
   }
 
   &__button--active {
-
     span {
       width: 0;
 
@@ -204,6 +212,10 @@
       &::after {
         transform: rotate(45deg);
       }
+    }
+
+    &:hover {
+      transform: none;
     }
   }
 }

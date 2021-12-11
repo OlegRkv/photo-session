@@ -235,6 +235,8 @@
   }
 
   &__item {
+    @extend %animation;
+    
     &:not(:last-child) {
       margin-right: 25px;
     }

@@ -55,6 +55,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff5ed;
+  @extend %animation;
 
   &::before {
     content: '';
@@ -77,6 +78,7 @@ main {
   font-size: 25px;
   color: #959191;
   background-color: #fdfbf8;
+  @extend %animation;
 
   &::before {
     content: '';
